@@ -69,7 +69,7 @@ try:
                 pass
             return "Request received"
 
-        webhook_module.app.run(host="0.0.0.0", port=port, debug=False)
+        webhook_module.app.run(host="localhost", port=port, debug=False)
         
 except Exception as e:
     PrintException()
