@@ -67,7 +67,7 @@
                         "description": {
                             "en": "Port where you need create a webwook, by default will be '5005'" 
                         },
-                        "id": "puerto",
+                        "id": "puert",
                         "css": "col-md-6"
                     }
                 ]
