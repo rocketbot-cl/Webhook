@@ -50,7 +50,8 @@
                             "pr": "Por padrão vai ser '/'"
                         },
                         "description": {
-                            "en": "Endpoint where you need create a request, by default will be '/'"
+                            "en": "Endpoint where you need create a request, by default will be '/'",
+                            "es": "Endpoint donde necesita crear una solicitud, por defecto será '/'"
                         },
                         "id": "endpoint",
                         "css": "col-md-6"
@@ -69,7 +70,8 @@
                             "pr": "Por padrão vai ser a porta 5005"
                         },
                         "description": {
-                            "en": "Port where you need create a webwook, by default will be '5005'" 
+                            "en": "Port where you need create a webwook, by default will be '5005'",
+                            "es": "Puerto donde necesitas crear el webhook, por defecto será '5005'" 
                         },
                         "id": "port",
                         "css": "col-md-6"

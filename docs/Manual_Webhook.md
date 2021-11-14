@@ -36,5 +36,5 @@ Con este comando puedes crear un webhook para que el robot escuche una petición
 '0.0.0.0:port/endpoint'
 |Parámetros|Descripción|ejemplo|
 | --- | --- | --- |
-|Endpoint|Endpoint where you need create a request, by default will be '/'|/webhook|
-|Puerto|Port where you need create a webwook, by default will be '5005'|5005|
+|Endpoint|Endpoint donde necesita crear una solicitud, por defecto será '/'|/webhook|
+|Puerto|Puerto donde necesitas crear el webhook, por defecto será '5005'|5005|
