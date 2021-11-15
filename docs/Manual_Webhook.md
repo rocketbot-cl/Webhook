@@ -3,7 +3,7 @@
 Con este módulo podrás trabajar con webhook en Rocketbot, como esperar una petición antes de continuar con el flujo de 
 tu robot  
   
-![banner](/docs/imgs/Banner_Webhook.png)
+![banner](imgs/Banner_Webhook.png)
 ## Como instalar este módulo
   
 __Descarga__ e __instala__ el contenido en la carpeta 'modules' en la ruta de rocketbot.  
