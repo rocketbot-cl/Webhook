@@ -1,11 +1,7 @@
-
-
-
-
 # Webhook
   
-With this module you can work with webhook in Rocketbot, how to wait for a request before continuing with the flow of 
-your robot  
+Con este módulo podrás trabajar con webhook en Rocketbot, como esperar una petición antes de continuar con el flujo de 
+tu robot  
   
 ![banner](/docs/imgs/Banner_Webhook.png)
 ## Como instalar este módulo
