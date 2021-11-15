@@ -1,3 +1,7 @@
+
+
+
+
 # Webhook
   
 With this module you can work with webhook in Rocketbot, how to wait for a request before continuing with the flow of 
@@ -8,6 +12,23 @@ your robot
   
 __Descarga__ e __instala__ el contenido en la carpeta 'modules' en la ruta de rocketbot.  
 
+
+
+
+## Como usar este módulo
+Para usar este módulo, necesitas tener disponible el puerto que quieras usar como webhook.
+
+
+### Exponer el webhook con NGROK
+1. Descargar NGROK (https://ngrok.com/download)
+2. Descomprimir el archivo
+3. Ejecute 
+ngrok y ejecute el comando "ngrok http port-number" Aquí el port-number es: 5002
+Una vez que ejecute el comando anterior
+ se expondrán dos URLs. Una para HTTP y otra para HTTPS. Puedes utilizar cualquiera de ellas.
+4. Copie la URL pública 
+del HTTP y del HTTP.
+![NGROK](imgs/ngrok.png)
 
 
 ## Descripción de los comandos

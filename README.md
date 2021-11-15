@@ -12,6 +12,23 @@ your robot
 __Download__ and __install__ the content in 'modules' folder in Rocketbot path  
 
 
+## How to use this module
+To use this module, you need to have a port available to expose the webhook.
+
+### Expose the 
+webhook with NGROK
+
+1. Download NGROK (https://ngrok.com/download)
+2. Unzip the file
+3. Run ngrok and run command "ngrok
+ http port-number" Here the port-number is: 5002
+Once you run the above command it will expose two URLs. One for HTTP 
+and another for HTTPS. You can use either of them.
+4. Copy the public URL of the HTTP and HTTP.
+
+
+![NGROK](docs/imgs/ngrok.png)
+
 
 ## Overview
 
