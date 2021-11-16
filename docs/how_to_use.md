@@ -11,6 +11,26 @@ Once you run the above command it will expose two URLs. One for HTTP and another
 
 ![NGROK](imgs/ngrok.png)
 
+### Use the webhook
+
+When executing the 'Create webhook' command, Rocketbot will pause waiting for the url configured in the command to be queried, either with a GET or POST request. If the request is GET, the data to be sent must be in the URL. If the request is POST, the data must be in the body of the request.
+
+This will return the following JSON:
+
+    {
+        "status": "true",
+        "uuid": "2c9f8f7e-b8e7-4b5b-b8e7-4b5b8e7b8e7b"
+    }
+
+
+To get data from Rocketbot, you must query the url 'localhost:port/:enpoint/:uuid'.
+This will return a JSON response in the following format:
+
+    {
+        "status": True",
+        "data": datos_desde_rocketbot
+    }
+
 ---
 
 ## Como usar este módulo
@@ -23,6 +43,25 @@ Para usar este módulo, necesitas tener disponible el puerto que quieras usar co
 Una vez que ejecute el comando anterior se expondrán dos URLs. Una para HTTP y otra para HTTPS. Puedes utilizar cualquiera de ellas.
 4. Copie la URL pública del HTTP y del HTTP.
 ![NGROK](imgs/ngrok.png)
+
+### Como usar el webhook
+
+Al ejecutar el comando de 'Crear webhook', rocketbot se pausará esperando que se consulte la url configurada en el comando, ya sea con una petición GET o POST. Si la petición es GET, los datos a enviar deben estar en la URL. Si la petición es POST, los datos deben estar en el cuerpo de la petición.
+
+Esto retornará una respuesta en JSON con el siguiente formato:
+
+    {
+        "status": True,
+        "uuid": "2c9f8f7e-b8e7-4b5b-b8e7-4b5b8e7b8e7b"
+    }
+
+Para obtener datos desde Rocketbot, debes consultar la url 'localhost:port/:enpoint/:uuid'.
+Esto retornará una respuesta en JSON con el siguiente formato:
+
+    {
+        "status": "ok",
+        "data": datos_desde_rocketbot
+    }
 
 ---
 
