@@ -1,3 +1,7 @@
+
+
+
+
 # Webhook
   
 Con este módulo podrás trabajar con webhook en Rocketbot, como esperar una petición antes de continuar con el flujo de 
@@ -26,6 +30,29 @@ Una vez que ejecute el comando anterior
 del HTTP y del HTTP.
 ![NGROK](imgs/ngrok.png)
 
+### Como usar el webhook
+
+Al ejecutar el comando de 'Crear webhook', 
+rocketbot se pausará esperando que se consulte la url configurada en el comando, ya sea con una petición GET o POST. Si 
+la petición es GET, los datos a enviar deben estar en la URL. Si la petición es POST, los datos deben estar en el cuerpo
+ de la petición.
+
+Esto retornará una respuesta en JSON con el siguiente formato:
+
+    {
+        "status": True,
+        "uuid": "2c9f8f7e-b8e7-4b5b-b8e7-4b5b8e7b8e7b"
+    }
+
+Para obtener datos desde Rocketbot, debes consultar la url 
+'localhost:port/:enpoint/:uuid'.
+Esto retornará una respuesta en JSON con el siguiente formato:
+
+    {
+        "status": True,
+        "data": datos_desde_rocketbot
+    }
+
 
 ## Descripción de los comandos
 
@@ -35,7 +62,10 @@ Con este comando puedes crear un webhook para que el robot escuche una petición
 '0.0.0.0:port/endpoint'
 |Parámetros|Descripción|ejemplo|
 | --- | --- | --- |
-|Endpoint|Endpoint where you need create a request, by default will be '/'|/webhook|
-|Puerto|Port where you need create a webwook, by default will be '5005'|5005|
+|Endpoint|Endpoint donde necesitas crear una petición, por defecto será '/'|/webhook|
+|Puerto|Puerto donde necesitas crear un webhook, por defecto será '5005'|5005|
+|Datos a devolver|Datos que quieres que devuelva al consultar la ruta urlpuerto/endpoint/get. Este debe ser un objeto que contenga como clave el uuid obtenido al consultar el endpoint y el valor debe ser lo que deseas enviar. Ver ejemplo|{'255de1a0-a6ea-465e-aa6a-0d6b25dd81c6': ['data', 'data2']}|
+|Método|Tipo de método para consultar el webhoook. Puede ser GET o POST|GET|
+|Variable donde almacenar resultado|Nombre de la variable donde almacenar el resultado de la consulta. Ejemplo 'resultado'||
   
 ![create_endpoint](imgs/create_endpoint.png)

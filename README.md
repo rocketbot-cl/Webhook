@@ -29,6 +29,31 @@ and another for HTTPS. You can use either of them.
 
 ![NGROK](docs/imgs/ngrok.png)
 
+### Use the webhook
+
+When executing the 'Create webhook' command, Rocketbot will pause waiting
+ for the url configured in the command to be queried, either with a GET or POST request. If the request is GET, the data
+ to be sent must be in the URL. If the request is POST, the data must be in the body of the request.
+
+This will return 
+the following JSON:
+
+    {
+        "status": "true",
+        "uuid": "2c9f8f7e-b8e7-4b5b-b8e7-4b5b8e7b8e7b"
+    }
+
+
+To 
+get data from Rocketbot, you must query the url 'localhost:port/:enpoint/:uuid'.
+This will return a JSON response in the
+ following format:
+
+    {
+        "status": True",
+        "data": datos_desde_rocketbot
+    }
+
 
 ## Overview
 
