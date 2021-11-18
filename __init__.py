@@ -94,9 +94,6 @@ try:
                 pass
             return {"status": False}
 
-<<<<<<< HEAD
-        webhook_module.app.run(host="localhost", port=port, debug=False)
-=======
         
         @webhook_module.app.route(endpoint + "/<uuid>", methods=["GET"])
         def getData(uuid):
@@ -115,7 +112,6 @@ try:
             return {"status": False}
             
         webhook_module.app.run(host="0.0.0.0", port=port, debug=False)
->>>>>>> master
         
 except Exception as e:
     PrintException()

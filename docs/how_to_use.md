@@ -1,7 +1,7 @@
 ## How to use this module
 To use this module, you need to have a port available to expose the webhook.
 
-### Expose the webhook with NGROK
+### Expose the webhook with NGROK (Optional)
 
 1. Download NGROK (https://ngrok.com/download)
 2. Unzip the file
@@ -36,7 +36,7 @@ This will return a JSON response in the following format:
 ## Como usar este módulo
 Para usar este módulo, necesitas tener disponible el puerto que quieras usar como webhook.
 
-### Exponer el webhook con NGROK
+### Exponer el webhook con NGROK (Opcional)
 1. Descargar NGROK (https://ngrok.com/download)
 2. Descomprimir el archivo
 3. Ejecute ngrok y ejecute el comando "ngrok http port-number" Aquí el port-number es: 5002
