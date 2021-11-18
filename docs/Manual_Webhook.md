@@ -19,7 +19,7 @@ __Descarga__ e __instala__ el contenido en la carpeta 'modules' en la ruta de ro
 Para usar este módulo, necesitas tener disponible el puerto que quieras usar como webhook.
 
 
-### Exponer el webhook con NGROK
+### Exponer el webhook con NGROK (Opcional)
 1. Descargar NGROK (https://ngrok.com/download)
 2. Descomprimir el archivo
 3. Ejecute 
@@ -64,7 +64,7 @@ Con este comando puedes crear un webhook para que el robot escuche una petición
 | --- | --- | --- |
 |Endpoint|Endpoint donde necesitas crear una petición, por defecto será '/'|/webhook|
 |Puerto|Puerto donde necesitas crear un webhook, por defecto será '5005'|5005|
-|Datos a devolver|Datos que quieres que devuelva al consultar la ruta urlpuerto/endpoint/get. Este debe ser un objeto que contenga como clave el uuid obtenido al consultar el endpoint y el valor debe ser lo que deseas enviar. Ver ejemplo|{'255de1a0-a6ea-465e-aa6a-0d6b25dd81c6': ['data', 'data2']}|
+|Datos a devolver|Datos que quieres que devuelva al consultar la ruta url:puerto/endpoint/uuid. Este debe ser un objeto que contenga como clave el uuid obtenido al consultar el endpoint y el valor debe ser lo que deseas enviar. Ver ejemplo|{'255de1a0-a6ea-465e-aa6a-0d6b25dd81c6': ['data', 'data2']}|
 |Método|Tipo de método para consultar el webhoook. Puede ser GET o POST|GET|
 |Variable donde almacenar resultado|Nombre de la variable donde almacenar el resultado de la consulta. Ejemplo 'resultado'||
   

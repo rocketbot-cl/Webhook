@@ -84,9 +84,9 @@
               "pr": "Dados para retornar"
             },
             "description": {
-              "en": "Data that you want to return when querying the url:port/endpoint/get route. This must be an object that contains as key the uuid obtained when querying the endpoint and the value must be what you want to send. See example",
-              "es": "Datos que quieres que devuelva al consultar la ruta url:puerto/endpoint/get. Este debe ser un objeto que contenga como clave el uuid obtenido al consultar el endpoint y el valor debe ser lo que deseas enviar. Ver ejemplo",
-              "pr": "Dados que você deseja retornar ao consultar a url:porto/endpoint/get route. Este deve ser um objeto que contenha como chave o uuid obtido ao consultar o ponto final e o valor deve ser o que você deseja enviar. Veja o exemplo"
+              "en": "Data that you want to return when querying the url:port/endpoint/uuid route. This must be an object that contains as key the uuid obtained when querying the endpoint and the value must be what you want to send. See example",
+              "es": "Datos que quieres que devuelva al consultar la ruta url:puerto/endpoint/uuid. Este debe ser un objeto que contenga como clave el uuid obtenido al consultar el endpoint y el valor debe ser lo que deseas enviar. Ver ejemplo",
+              "pr": "Dados que você deseja retornar ao consultar a url:porto/endpoint/uuid route. Este deve ser um objeto que contenha como chave o uuid obtido ao consultar o ponto final e o valor deve ser o que você deseja enviar. Veja o exemplo"
             },
             "help": {
               "es": "El dato a devolver debe ser un objeto que contenga como clave el uuid",
