@@ -4,68 +4,62 @@
 
 # Webhook
   
-Con este módulo podrás trabajar con webhook en Rocketbot, como esperar una petición antes de continuar con el flujo de 
-tu robot  
+Create a Webhook so the robot can listen for a request before continuing; the URL will be '0.0.0.0:port/endpoint.  
+
+*Read this in other languages: [English](Manual_Webhook.md), [Português](Manual_Webhook.pr.md), [Español](Manual_Webhook.es.md)*
   
 ![banner](imgs/Banner_Webhook.png)
-## Como instalar este módulo
+## How to install this module
   
-__Descarga__ e __instala__ el contenido en la carpeta 'modules' en la ruta de rocketbot.  
+To install the module in Rocketbot Studio, it can be done in two ways:
+1. Manual: __Download__ the .zip file and unzip it in the modules folder. The folder name must be the same as the module and inside it must have the following files and folders: \__init__.py, package.json, docs, example and libs. If you have the application open, refresh your browser to be able to use the new module.
+2. Automatic: When entering Rocketbot Studio on the right margin you will find the **Addons** section, select **Install Mods**, search for the desired module and press install.  
 
+## How to use this module
+To use this module, you need to have a port available to expose the webhook.
 
+### Expose the webhook with NGROK (Optional)
 
+1. Download NGROK (https://ngrok.com/download)
+2. Unzip the file
+3. Run ngrok and run command "ngrok http port-number" Here the port-number is: 5002
+Once you run the above command it will expose two URLs. One for HTTP and another for HTTPS. You can use either of them.
+4. Copy the public URL of the HTTP and HTTP.
 
-## Como usar este módulo
-Para usar este módulo, necesitas tener disponible el puerto que quieras usar como webhook.
-
-
-### Exponer el webhook con NGROK (Opcional)
-1. Descargar NGROK (https://ngrok.com/download)
-2. Descomprimir el archivo
-3. Ejecute 
-ngrok y ejecute el comando "ngrok http port-number" Aquí el port-number es: 5002
-Una vez que ejecute el comando anterior
- se expondrán dos URLs. Una para HTTP y otra para HTTPS. Puedes utilizar cualquiera de ellas.
-4. Copie la URL pública 
-del HTTP y del HTTP.
 ![NGROK](imgs/ngrok.png)
 
-### Como usar el webhook
+### Use the webhook
 
-Al ejecutar el comando de 'Crear webhook', 
-rocketbot se pausará esperando que se consulte la url configurada en el comando, ya sea con una petición GET o POST. Si 
-la petición es GET, los datos a enviar deben estar en la URL. Si la petición es POST, los datos deben estar en el cuerpo
- de la petición.
+When executing the 'Create webhook' command, Rocketbot will pause waiting for the url configured in the command to be queried, either with a GET or POST request. If the request is GET, the data to be sent must be in the URL. If the request is POST, the data must be in the body of the request.
 
-Esto retornará una respuesta en JSON con el siguiente formato:
+This will return the following JSON:
 
     {
-        "status": True,
+        "status": "true",
         "uuid": "2c9f8f7e-b8e7-4b5b-b8e7-4b5b8e7b8e7b"
     }
 
-Para obtener datos desde Rocketbot, debes consultar la url 
+
+To get data from Rocketbot, you must query the url 
 'localhost:port/:enpoint/:uuid'.
-Esto retornará una respuesta en JSON con el siguiente formato:
+This will return a JSON response in the following format:
 
     {
-        "status": True,
+        "status": True",
         "data": datos_desde_rocketbot
     }
 
 
-## Descripción de los comandos
+## Description of the commands
 
-### Crear webhook
+### Create webhook
   
-Con este comando puedes crear un webhook para que el robot escuche una petición antes de continuar, la url será 
-'0.0.0.0:port/endpoint'
-|Parámetros|Descripción|ejemplo|
+With this command you can create an endpoint for the robot to listen to a request before continuing, the url will be '0.0.0.0:port/endpoint'
+|Parameters|Description|example|
 | --- | --- | --- |
-|Endpoint|Endpoint donde necesitas crear una petición, por defecto será '/'|/webhook|
-|Puerto|Puerto donde necesitas crear un webhook, por defecto será '5005'|5005|
-|Datos a devolver|Datos que quieres que devuelva al consultar la ruta url:puerto/endpoint/uuid. Este debe ser un objeto que contenga como clave el uuid obtenido al consultar el endpoint y el valor debe ser lo que deseas enviar. Ver ejemplo|{'255de1a0-a6ea-465e-aa6a-0d6b25dd81c6': ['data', 'data2']}|
-|Método|Tipo de método para consultar el webhoook. Puede ser GET o POST|GET|
-|Variable donde almacenar resultado|Nombre de la variable donde almacenar el resultado de la consulta. Ejemplo 'resultado'||
-  
-![create_endpoint](imgs/create_endpoint.png)
+|Endpoint|Endpoint where you need create a request, by default will be '/'|/webhook|
+|Port|Port where you need create a webwook, by default will be '5005'|5005|
+|Data to return|Data that you want to return when querying the urlport/endpoint/uuid route. This must be an object that contains as key the uuid obtained when querying the endpoint and the value must be what you want to send. See example|{'255de1a0-a6ea-465e-aa6a-0d6b25dd81c6': ['data', 'data2']}|
+|Method|Type of method to query the webhook. Can be GET or POST|GET|
+|Variable where to store the result|Variable name where to store the result of the query. Example 'resultado'||
+|Get all the data||-|
