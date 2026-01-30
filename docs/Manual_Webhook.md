@@ -1,7 +1,3 @@
-
-
-
-
 # Webhook
   
 Create a Webhook so the robot can listen for a request before continuing; the URL will be '0.0.0.0:port/endpoint.  
