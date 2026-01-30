@@ -60,5 +60,5 @@ Con este comando puedes crear un webhook para que el robot escuche una petición
 |Puerto|Puerto donde necesitas crear un webhook, por defecto será '5005'|5005|
 |Datos a devolver|Datos que quieres que devuelva al consultar la ruta urlpuerto/endpoint/uuid. Este debe ser un objeto que contenga como clave el uuid obtenido al consultar el endpoint y el valor debe ser lo que deseas enviar. Ver ejemplo|{'255de1a0-a6ea-465e-aa6a-0d6b25dd81c6': ['data', 'data2']}|
 |Método|Tipo de método para consultar el webhoook. Puede ser GET o POST|GET|
-|Variable donde almacenar resultado|Nombre de la variable donde almacenar el resultado de la consulta. Ejemplo 'resultado'||
-|Obtener todo los datos||-|
+|Variable donde almacenar resultado|Nombre de la variable donde almacenar el resultado de la consulta. Ejemplo 'resultado'|Variable|
+|Obtener todo los datos|Seleccionando este checkbox obtendrás todos los datos de la petición.|-|

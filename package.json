@@ -129,6 +129,11 @@
           },
           {
             "type": "input",
+            "placeholder": {
+              "es": "Variable",
+              "en": "Variable",
+              "pr": "Variável"
+            },
             "title": {
               "es": "Variable donde almacenar resultado",
               "en": "Variable where to store the result",
@@ -164,6 +169,11 @@
               "es": "Tildar para obtener todos los datos de la petición.",
               "en": "Check the box to get all the details of the request.",
               "pr": "Marque a caixa para obter todos os detalhes da solicitação."
+            },
+            "description": {
+              "es": "Seleccionando este checkbox obtendrás todos los datos de la petición.",
+              "en": "Selecting this checkbox will give you all the details of the request.",
+              "pr": "Selecionar esta caixa de seleção fornecerá todos os detalhes da solicitação."
             },
             "id": "check_data",
             "css": "col-md-6"

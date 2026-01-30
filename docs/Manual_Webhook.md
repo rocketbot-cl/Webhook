@@ -61,5 +61,5 @@ With this command you can create an endpoint for the robot to listen to a reques
 |Port|Port where you need create a webwook, by default will be '5005'|5005|
 |Data to return|Data that you want to return when querying the urlport/endpoint/uuid route. This must be an object that contains as key the uuid obtained when querying the endpoint and the value must be what you want to send. See example|{'255de1a0-a6ea-465e-aa6a-0d6b25dd81c6': ['data', 'data2']}|
 |Method|Type of method to query the webhook. Can be GET or POST|GET|
-|Variable where to store the result|Variable name where to store the result of the query. Example 'resultado'||
-|Get all the data||-|
+|Variable where to store the result|Variable name where to store the result of the query. Example 'resultado'|Variable|
+|Get all the data|Selecting this checkbox will give you all the details of the request.|-|
