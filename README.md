@@ -4,64 +4,22 @@
 
 # Webhook
   
-With this module you can work with webhook in Rocketbot, how to wait for a request before continuing with the flow of 
-your robot  
+Create a Webhook so the robot can listen for a request before continuing; the URL will be '0.0.0.0:port/endpoint.  
 
-## Howto install this module
+*Read this in other languages: [English](README.md), [Português](README.pr.md), [Español](README.es.md)*
+
+## How to install this module
   
-__Download__ and __install__ the content in 'modules' folder in Rocketbot path  
-
-
-## How to use this module
-To use this module, you need to have a port available to expose the webhook.
-
-### Expose the 
-webhook with NGROK
-
-1. Download NGROK (https://ngrok.com/download)
-2. Unzip the file
-3. Run ngrok and run command "ngrok
- http port-number" Here the port-number is: 5002
-Once you run the above command it will expose two URLs. One for HTTP 
-and another for HTTPS. You can use either of them.
-4. Copy the public URL of the HTTP and HTTP.
-
-
-![NGROK](docs/imgs/ngrok.png)
-
-### Use the webhook
-
-When executing the 'Create webhook' command, Rocketbot will pause waiting
- for the url configured in the command to be queried, either with a GET or POST request. If the request is GET, the data
- to be sent must be in the URL. If the request is POST, the data must be in the body of the request.
-
-This will return 
-the following JSON:
-
-    {
-        "status": "true",
-        "uuid": "2c9f8f7e-b8e7-4b5b-b8e7-4b5b8e7b8e7b"
-    }
-
-
-To 
-get data from Rocketbot, you must query the url 'localhost:port/:enpoint/:uuid'.
-This will return a JSON response in the
- following format:
-
-    {
-        "status": True",
-        "data": datos_desde_rocketbot
-    }
+To install the module in Rocketbot Studio, it can be done in two ways:
+1. Manual: __Download__ the .zip file and unzip it in the modules folder. The folder name must be the same as the module and inside it must have the following files and folders: \__init__.py, package.json, docs, example and libs. If you have the application open, refresh your browser to be able to use the new module.
+2. Automatic: When entering Rocketbot Studio on the right margin you will find the **Addons** section, select **Install Mods**, search for the desired module and press install.  
 
 
 ## Overview
 
 
 1. Create webhook  
-With this command you can create an endpoint for the robot to listen to a request before continuing, the url will be 
-'0.0.0.0:port/endpoint'  
-![create_endpoint](example/img/create_endpoint.png)  
+With this command you can create an endpoint for the robot to listen to a request before continuing, the url will be '0.0.0.0:port/endpoint'  
 
 
 
