@@ -24,7 +24,6 @@ Para instalar librerias se debe ingresar por terminal a la carpeta "libs"
 
 """
 
-
 from urllib import request
 
 
@@ -96,23 +95,35 @@ try:
                 uuid = str(uuid4())
                 
                 
-                check_data = str(data.get("check_data") or GetParams("check_data") or "").strip().lower() == "true" 
-                # check_data = str(GetParams("check_data") or "").strip().lower() == "true"
+                check_data = str(GetParams("check_data") or "").strip().lower() == "true"
                 print("check_data", check_data)
                 
+                request_body = dict(data)
+                result_data = {
+                    uuid: request_body
+                }
+                http_response = {"status": True, "uuid": uuid}
+
+                if check_data:
+                    result_data = {
+                        uuid: {
+                            "body": request_body,
+                            "metadata": {
+                                "method": frequest.method,
+                                "endpoint": frequest.path,
+                                "headers": dict(frequest.headers),
+                                "args": frequest.args.to_dict(),
+                                "remote_addr": frequest.remote_addr
+                            }
+                        }
+                    }
                 
                 if result:
-                    if check_data:
-                        SetVar(result, {**dict(data),"status": True,"uuid": uuid})
-                    else:
-                        SetVar(result, {"status": True,"uuid": uuid})
+                    SetVar(result, result_data)
 
                 webhook_module.shutdown_server()
 
-                if check_data:
-                    return {"status": True, "uuid": uuid, "datos_recibidos": dict(data)}
-                else:
-                    return {"status": True, "uuid": uuid}
+                return http_response
 
                 
 
@@ -126,8 +137,16 @@ try:
         @webhook_module.app.route(endpoint + "/<uuid>", methods=["GET","POST"])
         def getData(uuid):
             global webhook_module
-            from flask import request as frequest
-            from uuid import uuid4
+            from flask import after_this_request
+
+            @after_this_request
+            def shutdown_after_response(response_obj):
+                try:
+                    webhook_module.shutdown_server()
+                except Exception:
+                    PrintException()
+                return response_obj
+
             try:
                 response = GetParams("response")
                 if response:
